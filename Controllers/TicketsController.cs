@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TicketApi.Data;
@@ -5,6 +6,7 @@ using TicketApi.Models;
 
 namespace TicketApi.Controllers;
 
+[Authorize]
 [ApiController]
 [Route("api/[controller]")]
 public class TicketsController : ControllerBase
